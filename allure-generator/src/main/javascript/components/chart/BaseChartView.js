@@ -29,6 +29,8 @@ export default class BaseChartView extends View {
             <g class="chart__axis chart__axis_y"></g>
             <g class="chart__plot"></g>
         </svg>`);
+        const svg = this.$('svg');
+        svg.attr('viewBox', `0 0 ${svg.width()} ${svg.height()}`)
         return select(this.$el[0]).select('svg');
     }
 
